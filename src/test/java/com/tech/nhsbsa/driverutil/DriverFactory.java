@@ -26,7 +26,7 @@ public class DriverFactory {
                 break;
         }
         driver.manage().window().maximize();
-        driver.manage().timeouts().implicitlyWait( Duration.ofSeconds(60));
+        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(60));
         return driver;
     }
 }

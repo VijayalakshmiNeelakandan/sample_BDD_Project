@@ -7,12 +7,12 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import org.testng.Assert;
 
-import java.util.concurrent.TimeUnit;
 
 public class CheckerQuestionairePage {
 
     private WebDriver driver = null;
 
+    // Objects identified using CSS, ID Locators
     @FindBy(id = "nhsuk-cookie-banner__link_accept_analytics")
     private WebElement cookieAcceptBtn;
 
@@ -63,17 +63,16 @@ public class CheckerQuestionairePage {
     public void openUkUrl() {
         String nhsUkUrl = "https://services.nhsbsa.nhs.uk/check-for-help-paying-nhs-costs/start";
         driver.get("https://services.nhsbsa.nhs.uk/check-for-help-paying-nhs-costs/start");
-        driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
         cookieAcceptBtn.isDisplayed();
         //Verifying if the User is launching the UK based Online Service as UK Citizen
-        Assert.assertEquals(driver.getCurrentUrl(),nhsUkUrl);
-        System.out.println("User opened the UK URL");
+        Assert.assertEquals(driver.getCurrentUrl(), nhsUkUrl);
+        System.out.println("******User opened the UK URL*******");
         cookieAcceptBtn.click();
     }
 
     //re-usable method to start the Checker Service
-    public void clickStartService () {
-        ((JavascriptExecutor)driver).executeScript("arguments[0].scrollIntoView(true);", startNowCta);
+    public void clickStartService() {
+        ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", startNowCta);
         startNowCta.click();
     }
 
@@ -108,7 +107,7 @@ public class CheckerQuestionairePage {
 
     //method to set the Dentail Practice Location
     public void setDentalRegRadioBtn() {
-         noDentalRegisteredRadioBtn.click();
+        noDentalRegisteredRadioBtn.click();
     }
 
     //method to Enter DOB
