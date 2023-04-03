@@ -1,4 +1,4 @@
-## Automation of get help with paying for NHS costs Online Service
+## Automation of 'get help with paying' for NHS costs Online Service
 
 ### Features of the Framework
 Page Object Model
@@ -12,9 +12,9 @@ Maven Build Model
 
 ### Pre-Requisites
 * Browsers - Chrome and Firefox
-* IntelliJ IDE to write the Test Scripts (along with Git, Cucumber, Gherkin Plugins )
+* IntelliJ IDE to write the Test Scripts (along with Git, Cucumber, Gherkin Plugins)
 * Java JDK 1.8
-* Maven Model
+* Maven
 * Git Bash or Git Desktop to clone or manage both Local and Remote Repositories
 * TestNG
 
@@ -26,11 +26,11 @@ Maven Build Model
 ##### Maven
 ```javascript
  mvn test
- By default it takes Chrome as Driver to execute the project
   or
  mvn clean test -Dtags= @regression -Dbrowser=firefox
  mvn clean test -Dtags= @regression -Dbrowser=chrome
  ```
+ By default it takes Chrome as Driver to execute the project
 
 ### Reports
 After the test execution completed, you can see Cucumber Basic HTML reports under `target` directory
@@ -45,15 +45,15 @@ Tests are covered for all the below requirement:
 
 ### Re-Usable PageObjects and Methods written in the Framework
 Page Objects:
-questionLabel - which was used multiple times in the re-usable methods
-cookieAcceptBtn
-nextCta
-noRadioBtn
+* questionLabel - which was used multiple times in the re-usable methods
+* cookieAcceptBtn
+* nextCta
+* noRadioBtn
 
 Re-Usable Methods:
-clickNextCta() - this was used 13 times across the Test Suite
-setNoOption() - this was used 9 times across the Test Suite
-verifyQnLabel() - this was used 12 times across the Test Suite
+* clickNextCta() - this was used 13 times across the Test Suite
+* setNoOption() - this was used 9 times across the Test Suite
+* verifyQnLabel() - this was used 12 times across the Test Suite
 
 ### Element Locators Used 
 css and id Attributes
